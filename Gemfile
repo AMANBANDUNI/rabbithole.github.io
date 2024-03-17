@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby "3.2.2"
+ruby "3.3.0"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.8"
@@ -40,7 +40,7 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 gem "bootsnap", require: false
 
 # Use Sass to process CSS
-# gem "sassc-rails"
+gem "sassc-rails"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
@@ -68,3 +68,16 @@ end
 
 gem 'mongoid', '~> 7.2'
 gem 'bson_ext'
+
+gem 'devise'
+
+gem 'aws-sdk-s3', require: false # For AWS S3 support\
+gem "fog-aws"
+
+# gem 'image_processing' # For image processing (optional)
+
+gem "carrierwave-mongoid", :require => "carrierwave/mongoid"
+
+gem 'dotenv-rails'
+
+gem "haml-rails"
